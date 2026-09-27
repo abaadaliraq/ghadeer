@@ -1020,3 +1020,132 @@ h2 {
     grid-template-columns: 1fr;
   }
 }
+
+.language-switcher {
+  position: fixed;
+  z-index: 20;
+  inset-block-start: 14px;
+  inset-inline-end: max(14px, calc((100vw - 600px) / 2 + 14px));
+  display: inline-flex;
+  gap: 8px;
+  padding: 7px 9px;
+  background: rgba(25, 24, 22, 0.34);
+  border: 1px solid rgba(243, 238, 229, 0.2);
+  backdrop-filter: blur(12px);
+}
+
+.language-switcher button {
+  appearance: none;
+  border: 0;
+  padding: 3px 4px;
+  color: #f3eee5;
+  background: transparent;
+  font: inherit;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  opacity: 0.45;
+  cursor: pointer;
+  transition:
+    opacity 220ms ease,
+    transform 220ms ease;
+}
+
+.language-switcher button:hover,
+.language-switcher button:focus-visible,
+.language-switcher button.is-active {
+  opacity: 1;
+}
+
+.language-switcher button:hover,
+.language-switcher button:focus-visible {
+  transform: translateY(-1px);
+}
+
+.masdar-credit {
+  margin-block-start: 28px;
+  padding-block-start: 24px;
+  border-top: 1px solid rgba(191, 176, 158, 0.16);
+}
+
+.credit-item-masdar img {
+  width: auto;
+  height: auto;
+  max-width: 118px;
+  max-height: 64px;
+  object-fit: contain;
+}
+
+.partner-label {
+  display: block;
+  margin-block-end: 12px;
+  color: #a78663;
+  font-size: 0.74rem;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+.artwork-specs {
+  display: grid;
+  gap: 5px;
+  margin: 16px 0 0;
+  color: #c8b8a5;
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+.artwork-specs p {
+  margin: 0;
+}
+
+html[dir="ltr"] .hero-copy,
+html[dir="ltr"] .artist-section,
+html[dir="ltr"] .artworks-section,
+html[dir="ltr"] .house-section,
+html[dir="ltr"] .contact-section {
+  direction: ltr;
+  text-align: left;
+}
+
+html[dir="ltr"] .hero-cover::before {
+  background: linear-gradient(
+    to right,
+    rgba(15, 13, 11, 0.5) 0%,
+    rgba(15, 13, 11, 0.2) 45%,
+    rgba(15, 13, 11, 0) 75%
+  );
+}
+
+html[dir="ltr"] .hero-top,
+html[dir="ltr"] .hero-center,
+html[dir="ltr"] .hero-venue {
+  margin-inline-start: 0;
+  margin-inline-end: auto;
+}
+
+html[dir="ltr"] .detail-counter {
+  direction: ltr;
+}
+
+html[dir="ltr"] .detail-track {
+  direction: ltr;
+}
+
+html[dir="ltr"] .artist-kicker,
+html[dir="ltr"] .artworks-kicker,
+html[dir="ltr"] .artwork-number,
+html[dir="ltr"] .house-kicker,
+html[dir="ltr"] .contact-kicker {
+  grid-template-columns: auto auto 1fr;
+}
+
+@media (max-width: 390px) {
+  .credit-logo-link img {
+    max-width: 82px;
+  }
+
+  .credit-item-masdar img {
+    max-width: 108px;
+  }
+}
